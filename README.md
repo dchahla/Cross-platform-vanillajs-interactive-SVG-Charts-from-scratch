@@ -106,9 +106,13 @@ To avoid recreating a situation in which we are charting things but cannot deter
 
 ----
 
-I've gotten a number of PM's about achieving moment.js using vanilla JavaScript. Hope this helps build you something awesome. Show me a star if this helped you. 
+I've gotten a number of PM's on about achieving moment.js using vanilla JavaScript. Hope this helps build you something awesome. Show me a star if this helped you. 
 
 ```
+
+const eventTimestamp = new Date().getTime() + msUntil
+const timeUntilEvent = getTimeUntilEvent(eventTimestamp)
+
 function getTimeUntilEvent (eventTimestamp) {
   const currentTime = new Date().getTime()
   const timeDifference = eventTimestamp - currentTime
