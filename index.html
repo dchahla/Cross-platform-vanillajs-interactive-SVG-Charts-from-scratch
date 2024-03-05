@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Byte Barometer</title>
+    <meta name="title" content="Byte Barometer" />
+    <meta name="description" content="An unbiased and accurate speed test of URLs. No hardware acceleration. 
+" />
+    <meta name="keywords"
+        content="Web Performance, Metrics, Bytes, Nanoseconds, Golang, SVG, charts, Vanilla, js, JavaScript, no deps">
+    <meta name="author" content="Daniel Chahla">
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://chahla.net/static/byte-barometer/" />
+    <meta property="og:title" content="Byte Barometer" />
+    <meta property="og:description" content="An unbiased and accurate speed test of URLs. No hardware acceleration. 
+" />
+    <meta property="og:image" content="./metadata.jpg" />
+    <meta property="twitter:card" content="summary_large_image" />
+    <meta property="twitter:url" content="https://chahla.net/static/byte-barometer/" />
+    <meta property="twitter:title" content="Byte Barometer" />
+    <meta property="twitter:description" content="An unbiased and accurate speed test of URLs. No hardware acceleration. 
+" />
+    <meta property="twitter:image" content="./metadata.jpg" />
+    <script src="vandamme"></script>
+    <link rel="icon" type="image/x-icon" href="./favicon.ico">
+    <link rel="stylesheet" href="monochart.min.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+
+
+<body>
+
+
+
+    <h4 style="opacity: 0;" id="nextup">Next up</h4>
+    <div id="backdrop"></div>
+    <div>
+        <section class="halfsec">
+            <div id="data-container">
+            </div>
+            <section class="nav-flyout" id="parentarticle">
+                <article id="articleSection" style="visibility: hidden;">
+                    <h4 id="next-up">Queue <span id="numWaiting"></span></h4>
+                </article>
+                <div id="wtayot-container" style="visibility: hidden;">
+                    <div id="wtayot-bubble" style="visibility: hidden;"></div>
+                    <button id="wtayot-button" class="speech-bubble sbutton" type="button"
+                        onclick="toggleNewTestForm()">Want to run your own
+                        test?</button>
+                </div>
+                <article class="urlForm" id="newTestForm" style="display: none;">
+                    <h4 id="createNew"> Create new test </h4>
+                    <i class="close-icon" onclick="toggleNewTestForm()"></i>
+
+                    <form id="editable-form" onsubmit="event.preventDefault();">
+                        <label>1)</label>
+                        <div class="editable-input" id="editableInput">
+                            <input type="text" placeholder="Name your test" aria-placeholder="Name your test"
+                                id="labelInput" name="label" class="form-control-lg input-sm" value="">
+                            <span class="editable-underline-subs"></span>
+                        </div>
+                        <span class="label_link subs_label">
+                            <div class="editable" id="header_label">
+                            </div>
+                        </span>
+                    </form>
+                    <form id="urlForm" onsubmit="addUrl(); event.preventDefault();">
+                        <label id="urlLabel" for="urlInput0"> 2) Add up to four URLs:</label>
+                        <input placeholder="https://..." type="text" class="urlInput" id="urlInput0" name="urlInput0"
+                            onclick="checkInput()" oninput="checkInput(); checkForDups();">
+                        <p id="urlError0" class="error"></p>
+
+                        <input placeholder="https://..." type="text" class="urlInput" id="urlInput1" name="urlInput1"
+                            onclick="checkInput()" oninput="checkForDups();">
+                        <p id="urlError1" class="error"></p>
+
+                        <input placeholder="https://..." type="text" class="urlInput" id="urlInput2" name="urlInput2"
+                            onclick="checkInput()" oninput="checkForDups();">
+                        <p id="urlError2" class="error"></p>
+
+                        <input placeholder="https://..." type="text" class="urlInput" id="urlInput3" name="urlInput3"
+                            onclick="checkInput() " oninput="checkForDups();">
+                        <p id="urlError3" class="error"></p>
+                        <p id="urlError" class="error"></p>
+
+                        <button id="validateUrl" type="button" onclick="addUrl()">Validate</button>
+                        <section id="urlList" style="position: absolute; right:  -1000px;"></section>
+                        <button class="right" id="submitUrlButton" style="visibility: hidden;" type="button"
+                            onclick="submitUrls()">Submit</button>
+                    </form>
+                </article>
+            </section>
+        </section>
+    </div>
+    <div id="chartSection">
+        <svg id="barChartContentSize" class="chart" width="500" height="340"></svg>
+        <svg id="barChartNanoseconds" class="chart" width="500" height="340"></svg>
+        <svg id="barChartBytespersecond" class="chart" width="500" height="340"></svg>
+    </div>
+</body>
+
+<footer>
+
+    <div style="padding: 1em;"> chahla.net © 2015 – 2024</div>
+</footer>
+
+</html>
