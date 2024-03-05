@@ -1,8 +1,8 @@
 # Happy-Charts - SVG charts from scratch in 2024 (rewriting AWS visualization core in vanilla js)
 A barebone, easily portable SVG visualizations in Vanilla JavaScript
 
-[Codepen](https://codepen.io/urdoingitwrong/pen/abMMqRx)
-
+Play with the codepen [here:](https://codepen.io/urdoingitwrong/pen/abMMqRx)
+See it in use [here:](https://chahla.net/static/byte-barometer/)
 
 # Interactable SVG Charts from scratch 
 ---
