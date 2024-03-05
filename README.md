@@ -12,7 +12,7 @@ Start to finish in 30 minutes or less.
 
 | Background | Context |
 | ------ | ------ |
-| AWS charts are... less than to be desired on mobile. UI is hard. So is the backend. They are running the world's infustructure, god forbid someone wants to check status while on Mobile. It is 2024; let's build something better. To do that, first we must start our requirements. | ![AWS.IS.A.LOT.OF.TALK](https://res.cloudinary.com/swoopshop/image/upload/f_auto,q_auto/y1d6h5r3h1ycvkqnfhzq) |
+| AWS charts are... less than to be desired on mobile. UI is hard. So is the backend. It is 2024; let's build something better. To do that, first we must start our requirements. | ![AWS.IS.A.LOT.OF.TALK](https://res.cloudinary.com/swoopshop/image/upload/f_auto,q_auto/y1d6h5r3h1ycvkqnfhzq) |
 
 
 **The charts shall...**
