@@ -91,12 +91,12 @@ const data = [
 ]
 ```
 
-Now that we have data. Let's chart some shit!  
+Now that we have data. Let's chart some stuff!  
 
 First, We will need an HTML element to attach our logic to. While this can be dynamically created in JavaScript, I prefer to set the *width* and *height* upfront to be able to see how it fits on mobile. 
 
 ```
-<svg id="barChartNanoseconds" class="chart" width="500" height="340"></svg>
+<svg id="barChartNanoseconds" class="chart" width="300" height="340"></svg>
 ```
 
 To avoid recreating a situation in which we are charting things but cannot determine their units of measure. 
