@@ -914,18 +914,14 @@ const createBarChart = (svgId, choice, unit) => {
   data.forEach((item, index) => {
     function computeIdealWidth (minPlotPoints) {
       const maxWidth = 500
-
       const availWidth = window.screen.availWidth
-
       let maxAllowedWidth = availWidth / minPlotPoints
       const factor =
         window.screen.availWidth < 800
           ? Math.floor(window.screen.availWidth / 5)
           : 120
       maxAllowedWidth = Math.min(maxAllowedWidth, factor)
-
       const idealWidth = Math.min(maxAllowedWidth, maxWidth)
-
       return idealWidth
     }
 
@@ -933,7 +929,6 @@ const createBarChart = (svgId, choice, unit) => {
     const text = document.createElementNS('http://www.w3.org/2000/svg', 'text')
     const recty = item[choice] * calculateYScale(choice)
     rect.setAttribute('id', `rect${index}`)
-
     rect.setAttribute('x', index * computeIdealWidth(data.length) + 100)
     rect.setAttribute('y', 300 - recty)
     rect.setAttribute('width', 10)
@@ -944,14 +939,11 @@ const createBarChart = (svgId, choice, unit) => {
     }, 100 * index)
     svg.appendChild(rect)
     const title = document.createElement('div')
-
     title.textContent = `URL: ${item.url}\n 
     Bytes: ${item['content-size']}\nNanoseconds: ${item.nanoseconds}\nBytes per Second: ${item['bytes-per-second']}`
-
     const titlelabel = document.createElement('div')
     titlelabel.textContent = `URL: ${item.url}\n 
     Bytes: ${item['content-size']}\nNanoseconds: ${item.nanoseconds}\nBytes per Second: ${item['bytes-per-second']}`
-
     rect.addEventListener('mouseover', e => {
       if (!isTouchDevice()) {
         setTimeout(() => {
@@ -965,7 +957,6 @@ const createBarChart = (svgId, choice, unit) => {
           titlelabel.style.position = 'absolute'
           titlelabel.style.left = e.clientX + 'px'
           titlelabel.style.top = e.pageY + 'px'
-
           document.getElementById('chartSection').appendChild(titlelabel)
         }, 200)
       }
@@ -1054,7 +1045,6 @@ const createBarChart = (svgId, choice, unit) => {
   })
 
   const svgRect = svg.getBoundingClientRect()
-
   const yAxisLabel = document.createElementNS(
     'http://www.w3.org/2000/svg',
     'text'
@@ -1110,7 +1100,6 @@ function resizeSVGs () {
   const screenWidth = window.innerWidth
   const scaler = window.devicePixelRatio
   const isPortrait = screenWidth < window.innerHeight
-
   if (isPortrait && isTouchDevice && window.innerWidth < 600) {
     const scale = screenWidth / (520 + scaler * 2)
     svgs.forEach(function (svg) {
@@ -1165,32 +1154,26 @@ const addArticle = function (textContent, details, timestamp) {
   if (speechBubble) {
     speechBubble.style.visibility = 'hidden'
   }
-
   const section = document.getElementById('articleSection')
   const newArticle = document.createElement('article')
   newArticle.id = timestamp
   newArticle.classList.add('slide-in')
-
   const paragraph = document.createElement('span')
   paragraph.textContent = textContent
-
   const detailsElement = document.createElement('div')
   detailsElement.style.height = 0
   detailsElement.style.visibility = 'hidden'
   detailsElement.classList.add('details')
-
   details.forEach(url => {
     const urlDiv = document.createElement('div')
     urlDiv.textContent = `'${url}'`
     detailsElement.appendChild(urlDiv)
   })
-
   const addButton = document.createElement('button')
   addButton.textContent = 'Details'
   addButton.onclick = function () {
     openArticleDetails(detailsElement, addButton, closeButton)
   }
-
   const closeButton = document.createElement('button')
   closeButton.textContent = 'Close'
   closeButton.style.display = 'none'
@@ -1202,11 +1185,9 @@ const addArticle = function (textContent, details, timestamp) {
   newArticle.appendChild(addButton)
   newArticle.appendChild(closeButton)
   newArticle.appendChild(detailsElement)
-
   section.appendChild(newArticle)
   if (speechBubble) {
     clearTimeout(clickTimeout)
-
     clickTimeout = setTimeout(() => {
       updateSpeechBubblePosition(true)
     }, 1200)
@@ -1222,7 +1203,6 @@ const removeArticle = function (event) {
   event.preventDefault()
   const button = event.currentTarget
   const article = button.parentNode
-
   article.classList.remove('slide-in')
   article.classList.add('slide-out')
   const html = document.querySelector('html')
@@ -1231,7 +1211,6 @@ const removeArticle = function (event) {
   article.addEventListener('oanimationend', removeHandler)
   article.addEventListener('animationend', removeHandler)
   article.addEventListener('webkitAnimationEnd', removeHandler)
-
   function removeHandler () {
     article.remove()
     html.style.removeProperty('overflow-x')
@@ -1241,7 +1220,6 @@ const removeArticle = function (event) {
   }
 
   clearTimeout(clickTimeout)
-
   clickTimeout = setTimeout(() => {
     updateSpeechBubblePosition(false)
   }, 1200)
@@ -1253,7 +1231,6 @@ function render () {
     document.getElementById('barChartNanoseconds').innerHTML = null
     document.getElementById('barChartBytespersecond').innerHTML = null
     document.getElementById('barChartContentSize').innerHTML = null
-
     printDataTable('data-container', data)
     enableHamburger()
     createBarChart('barChartNanoseconds', 'nanoseconds', 'ns')
