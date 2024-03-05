@@ -1,4 +1,4 @@
-# Happy-Charts
+# Happy-Charts - SVG charts from scratch in 2024 (rewriting AWS visualization core in vanilla js)
 A barebone, easily portable SVG visualizations in Vanilla JavaScript
 
 # Interactable SVG Charts from scratch 
@@ -99,7 +99,11 @@ First, We will need an HTML element to attach our logic to. While this can be dy
 To avoid recreating a situation in which we are charting things but cannot determine their units of measure. 
  *cough* Let's tackle the y-labels next.
  
-I've gotten a number of PM's about achieving moment.js using vanilla JavaScript. 
+- [Full article here:](https://medium.com/@dchahla/svg-charts-from-scratch-in-2024-2f95d029c3bf) - SVG charts from scratch in 2024 (rewriting AWS visualization core in vanilla js)
+
+----
+
+I've gotten a number of PM's about achieving moment.js using vanilla JavaScript. Hope this helps build you something awesome. Show me a star if this helped you. 
 
 ```
 function getTimeUntilEvent (eventTimestamp) {
