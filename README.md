@@ -8,7 +8,7 @@ See it in use [here.](https://chahla.net/static/byte-barometer/)
 
 | Background | Context |
 | ------ | ------ |
-| AWS charts are... less than to be desired on mobile. UI is hard. So is the backend. It is 2024; let's build something better. To do that, first we must start our requirements. | ![AWS.IS.A.LOT.OF.TALK](https://res.cloudinary.com/swoopshop/image/upload/f_auto,q_auto/y1d6h5r3h1ycvkqnfhzq) |
+| Let's try to improve on this. | ![AWS.2/15/2024](https://res.cloudinary.com/swoopshop/image/upload/f_auto,q_auto/y1d6h5r3h1ycvkqnfhzq) |
 
 
 **The charts shall...**
