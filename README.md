@@ -6,10 +6,6 @@ Play with the codepen [here.](https://codepen.io/urdoingitwrong/pen/abMMqRx)
 See it in use [here.](https://chahla.net/static/byte-barometer/)
 ---
 
-| Background | Context |
-| ------ | ------ |
-| Let's try to improve on this. | ![AWS.2/15/2024](https://res.cloudinary.com/swoopshop/image/upload/f_auto,q_auto/y1d6h5r3h1ycvkqnfhzq) |
-
 
 **The charts shall...**
 - Be dynamically constructed as SVGs on the client's side. 
