@@ -50,38 +50,7 @@ data[3]
 └── Number "seconds": 0.968598554,
 └── Number "bytes-per-second": 896932.9929435349
 ```
-```
-const data = [
-  {
-    "url": "ttps://weather.com",
-    "content-size": 0,
-    "nanoseconds": 4890831,
-    "seconds": 0.004890831,
-    "bytes-per-second": 0
-  },
-  {
-    "url": "https://amazon.com",
-    "content-size": 6591,
-    "nanoseconds": 617613938,
-    "seconds": 0.617613938,
-    "bytes-per-second": 10671.71511922712
-  },
-  {
-    "url": "https://sugarbeats.com",
-    "content-size": 1591459,
-    "nanoseconds": 893689449,
-    "seconds": 0.893689449,
-    "bytes-per-second": 1780774.0728960983
-  },
-  {
-    "url": "https://youtube.com",
-    "content-size": 868768,
-    "nanoseconds": 968598554,
-    "seconds": 0.968598554,
-    "bytes-per-second": 896932.9929435349
-  }
-]
-```
+
 
 Now that we have data. Let's chart some stuff!  
 
