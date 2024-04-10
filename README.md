@@ -67,7 +67,7 @@ To avoid recreating a situation in which we are charting things but cannot deter
 
 ----
 
-I've gotten a number of PM's on about achieving moment.js using vanilla JavaScript. Hope this helps build you something awesome. 
+I've gotten a number of PM's about achieving moment.js using vanilla JavaScript. Hope this helps build you something awesome. 
 
 ```
 
